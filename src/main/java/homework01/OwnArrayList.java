@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
-public  class OwnArrayList<E> {
+public class OwnArrayList<E> {
 
     /**
      * DEFAULT_CAPACITY отвечает за стандартный размер массива
@@ -32,10 +32,10 @@ public  class OwnArrayList<E> {
     private static final Object[] EMPTY_elements = {};
 
     /**
-     *  Конструктор для создания списка с заданным количеством элементов
+     * Конструктор для создания списка с заданным количеством элементов
      */
     public OwnArrayList(int initialCapacity) {
-        if(initialCapacity > 0) {
+        if (initialCapacity > 0) {
             this.elements = new Object[initialCapacity];
         } else if (initialCapacity == 0) {
             this.elements = EMPTY_elements;
@@ -100,7 +100,6 @@ public  class OwnArrayList<E> {
     }
 
 
-
     /**
      * Добавить элемент
      */
@@ -109,7 +108,96 @@ public  class OwnArrayList<E> {
             elements = grow();
         }
         elements[size] = el;
+        size++;
+    }
 
+    /**
+     * Добавить элемент в указанный индекс
+     */
+    public void add(int index, E el) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+        }
+
+        final int s;
+        Object[] elementData;
+        if ((s = size) == (elementData = this.elements).length)
+            elementData = grow();
+
+        System.arraycopy(elementData, index, elementData, index + 1, s - index);
+        elementData[index] = el;
+        size = s + 1;
+    }
+
+    /**
+     * Добавить коллекцию
+     */
+    public boolean addAll(Collection<? extends E> c) {
+        Object[] a = c.toArray();
+        int numNew = a.length;
+        if (numNew == 0)
+            return false;
+        Object[] elementData;
+        final int s;
+        if (numNew > (elementData = this.elements).length - (s = size))
+            elementData = grow(s + numNew);
+        System.arraycopy(a, 0, elementData, s, numNew);
+        size = s + numNew;
+        return true;
+    }
+
+
+    /**
+     * Метод для удаления элемента без возврата значения
+     */
+    private void fastRemove(Object[] es, int i) {
+        final int newSize;
+        if ((newSize = size - 1) > i)
+            System.arraycopy(es, i + 1, es, i, newSize - i);
+        es[size = newSize] = null;
+    }
+
+    /**
+     * Удалить элемент по equals
+     */
+    public void remove(Object o) {
+        final Object[] es = elements;
+        final int size = this.size;
+        int i = 0;
+
+        if (o == null) {
+            for (; i < size; i++) {
+                if (es[i] == null) {
+                    break;
+                }
+            }
+        } else {
+            for (; i < size; i++) {
+                if (o.equals(es[i])) {
+                    break;
+                }
+            }
+        }
+
+        if (i < size) {
+            fastRemove(es, i);
+        }
+    }
+
+    /**
+     * Быстрая сортировка
+     */
+
+
+
+
+    /**
+     * Очистить коллекцию
+     */
+    public void clear() {
+        final Object[] es = elements;
+        for (int to = size, i = size = 0; i < to; i++)
+            es[i] = null;
     }
 
     /**
