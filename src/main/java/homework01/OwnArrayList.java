@@ -1,13 +1,12 @@
 package homework01;
 
+import java.util.*;
 
-import jdk.internal.util.ArraysSupport;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Objects;
-
+/**
+ * Моя реализация коллекции, по типу и функионалу схожая с <a>java.util.ArrayList</a>
+ *
+ * @author Eduard Kamalov
+ */
 public class OwnArrayList<E> {
 
     /**
@@ -16,7 +15,7 @@ public class OwnArrayList<E> {
     private static final int DEFAULT_CAPACITY = 10;
 
     /**
-     * переменная size определяет актуальное количество элементов в коллекции, увеличивается при добавлении и уменьшается при удалении
+     * Переменная size определяет актуальное количество элементов в коллекции, увеличивается при добавлении и уменьшается при удалении
      */
     private int size;
 
@@ -80,19 +79,25 @@ public class OwnArrayList<E> {
         return elements(index);
     }
 
-    /**
-     * Увеличивает вместимость коллекции, учитывая что коллекция содержит хотя бы минимальную емкость
-     */
+
     private Object[] grow(int minCapacity) {
         int oldCapacity = elements.length;
+
         if (oldCapacity > 0 || elements != EMPTY_elements) {
-            int newCapacity = ArraysSupport.newLength(oldCapacity,
-                    minCapacity - oldCapacity, /* minimum growth */
-                    oldCapacity >> 1           /* preferred growth */);
+            int newCapacity = oldCapacity + (oldCapacity >> 1);
+            newCapacity = Math.max(newCapacity, minCapacity);
             return elements = Arrays.copyOf(elements, newCapacity);
         } else {
             return elements = new Object[Math.max(DEFAULT_CAPACITY, minCapacity)];
         }
+    }
+
+
+    /**
+     * Геттер для переменной size
+     */
+    public int getSize() {
+        return size;
     }
 
     private Object[] grow() {
@@ -116,7 +121,7 @@ public class OwnArrayList<E> {
      */
     public void add(int index, E el) {
         if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
+            throw new IndexOutOfBoundsException("Значение индекса превышает размер коллекции: " + size);
         }
 
         final int s;
@@ -132,29 +137,36 @@ public class OwnArrayList<E> {
     /**
      * Добавить коллекцию
      */
-    public boolean addAll(Collection<? extends E> c) {
+    public void addAll(Collection<? extends E> c) {
         Object[] a = c.toArray();
         int numNew = a.length;
         if (numNew == 0)
-            return false;
+            return;
         Object[] elementData;
         final int s;
         if (numNew > (elementData = this.elements).length - (s = size))
             elementData = grow(s + numNew);
         System.arraycopy(a, 0, elementData, s, numNew);
         size = s + numNew;
-        return true;
     }
 
 
-    /**
-     * Метод для удаления элемента без возврата значения
-     */
     private void fastRemove(Object[] es, int i) {
         final int newSize;
         if ((newSize = size - 1) > i)
             System.arraycopy(es, i + 1, es, i, newSize - i);
         es[size = newSize] = null;
+    }
+
+    /**
+     * Удалить элемент по индексу
+     */
+    public void remove(int i) throws IllegalArgumentException {
+        if (i >= 0 && i < elements.length) {
+            elements[i] = null;
+            size--;
+        } else throw new IllegalArgumentException("Неверное значение индекса");
+
     }
 
     /**
@@ -184,12 +196,54 @@ public class OwnArrayList<E> {
         }
     }
 
+
     /**
-     * Быстрая сортировка
+     * Быстрая сортировка с компаратором
      */
+    public void sort() {
+        quicksort(0, size - 1, null);
+    }
 
 
+    public void sort(Comparator<? super E> comparator) {
+        quicksort(0, size - 1, comparator);
+    }
 
+    private void quicksort(int low, int high, Comparator<? super E> comparator) {
+        if (low < high) {
+            int pivotIndex = partition(low, high, comparator);
+            quicksort(low, pivotIndex - 1, comparator);
+            quicksort(pivotIndex + 1, high, comparator);
+        }
+    }
+
+    private int partition(int low, int high, Comparator<? super E> comparator) {
+        E pivot = (E) elements[high];
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            if (compare((E) elements[j], pivot, comparator) < 0) {
+                i++;
+                swap(i, j);
+            }
+        }
+        swap(i + 1, high);
+        return i + 1;
+    }
+
+    private void swap(int i, int j) {
+        E temp = (E) elements[i];
+        elements[i] = elements[j];
+        elements[j] = temp;
+    }
+
+    private int compare(E o1, E o2, Comparator<? super E> comparator) {
+        if (comparator != null) {
+            return comparator.compare(o1, o2);
+        } else {
+            return ((Comparable<? super E>) o1).compareTo(o2);
+        }
+    }
 
     /**
      * Очистить коллекцию
@@ -199,6 +253,7 @@ public class OwnArrayList<E> {
         for (int to = size, i = size = 0; i < to; i++)
             es[i] = null;
     }
+
 
     /**
      * Печать коллекции в консоль

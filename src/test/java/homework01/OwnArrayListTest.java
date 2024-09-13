@@ -47,23 +47,15 @@ class OwnArrayListTest {
         test1.print();
         System.out.println("[OK] - добавляем элемент по индексу и распечатываем коллекцию\n");
 
-    }
-
-    @Test
-    void testExpectedException() {
-
-        OwnArrayList<String> test1 = new OwnArrayList<>(20);
-        test1.add((String) "Ivan");
-        test1.add((String) "Derek");
-        test1.add((String) "Trevor");
-
         Exception exception = assertThrows(IndexOutOfBoundsException.class, () -> {
             test1.add(13, "Lisa");
         });
         System.out.println("[OK] - добавляем элемент по индексу превывшающему размер коллекции, проверяем на срабатывание исключения\n");
 
-        assertEquals("Значение индекса превышает размер коллекции", exception.getMessage());
+        assertEquals("Значение индекса превышает размер коллекции: " + test1.getSize(), exception.getMessage());
+
     }
+
 
 
 @Test
@@ -93,6 +85,13 @@ void remove() {
     test1.remove("Carl");
     test1.print();
     System.out.println("[OK] - создаем коллекцию, удаляем элемент \"Carl\"\n");
+
+    Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+        test1.remove(-1);
+    });
+    System.out.println("[OK] - проверяем на срабатывание исключения\n");
+
+    assertEquals("Неверное значение индекса", exception.getMessage());
 }
 
 @Test
@@ -106,6 +105,18 @@ void clear() {
     System.out.println("[OK] - создаем коллекцию, очищаем и выводим в консоль\n");
 
 }
+
+    @Test
+    void quicksort() {
+        OwnArrayList<String> test1 = new OwnArrayList<>(20);
+        test1.add((String) "Ivan");
+        test1.add((String) "Derek");
+        test1.add((String) "Anton");
+        test1.sort();
+        test1.print();
+        System.out.println("[OK] - создаем коллекцию, сортируем и выводим в консоль\n");
+
+    }
 
 @AfterEach
 void tearThis() {

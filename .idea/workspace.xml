@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68c8275f-8aa2-4978-98b6-75987536a4a8" name="Changes" comment="First iteration of AstonHomework2&#10;New methods and tests">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/remote-targets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework01/Homework01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework01/Homework01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework01/OwnArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework01/OwnArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/homework01/OwnArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/homework01/OwnArrayListTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;webwanter&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/webwanter/AstonHomework2&quot;,
+    &quot;accountId&quot;: &quot;712c8f17-6e9e-4bad-a5f6-2d4a9ae389ba&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2/lib/src.zip!/java.base/java/lang/Iterable.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2/lib/src.zip!/java.base/java/util/ArrayList.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2/lib/src.zip!/java.base/java/util/Arrays.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2/lib/src.zip!/java.base/java/util/Collection.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2/lib/src.zip!/java.base/java/util/Comparator.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2/lib/src.zip!/java.base/java/util/List.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2/lib/src.zip!/java.base/jdk/internal/util/ArraysSupport.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../.asdf/installs/java/openjdk-23/lib/src.zip!/java.base/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="\\wsl.localhost\Ubuntu\home\webscout\.asdf\installs\maven\3.9.9" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="21 (WSL)" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2lbvTdJzTLSL9MB7YFAocd5kTLw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Homework01.executor": "Run",
+    "JUnit.OwnArrayListTest.add.executor": "Debug",
+    "JUnit.OwnArrayListTest.executor": "Run",
+    "JUnit.OwnArrayListTest.get.executor": "Run",
+    "JUnit.OwnArrayListTest.remove.executor": "Run",
+    "JUnit.OwnArrayListTest.testExpectedException.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "//wsl.localhost/Ubuntu/home/webscout/development/AstonHomework2",
+    "onboarding.tips.debug.path": "//wsl.localhost/Ubuntu/home/webscout/development/AstonHomework2/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="homework01" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.OwnArrayListTest">
+    <configuration name="Homework01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="homework01.Homework01" />
+      <module name="AstonHomework2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OwnArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AstonHomework2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../.asdf/installs/java/openjdk-21.0.2" />
+      <option name="PACKAGE_NAME" value="homework01" />
+      <option name="MAIN_CLASS_NAME" value="homework01.OwnArrayListTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OwnArrayListTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AstonHomework2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework01" />
+      <option name="MAIN_CLASS_NAME" value="homework01.OwnArrayListTest" />
+      <option name="METHOD_NAME" value="get" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OwnArrayListTest.remove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AstonHomework2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="homework01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="homework01" />
+      <option name="MAIN_CLASS_NAME" value="homework01.OwnArrayListTest" />
+      <option name="METHOD_NAME" value="remove" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Homework01" />
+      <item itemvalue="JUnit.OwnArrayListTest.remove" />
+      <item itemvalue="JUnit.OwnArrayListTest.get" />
+      <item itemvalue="JUnit.OwnArrayListTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OwnArrayListTest" />
+        <item itemvalue="Application.Homework01" />
+        <item itemvalue="JUnit.OwnArrayListTest.remove" />
+        <item itemvalue="JUnit.OwnArrayListTest.get" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68c8275f-8aa2-4978-98b6-75987536a4a8" name="Changes" comment="" />
+      <created>1725461600067</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725461600067</updated>
+    </task>
+    <task id="LOCAL-00001" summary="First iteration of AstonHomework2">
+      <option name="closed" value="true" />
+      <created>1726151197156</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726151197156</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First iteration of AstonHomework2&#10;New methods and tests">
+      <option name="closed" value="true" />
+      <created>1726175898519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726175898519</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First iteration of AstonHomework2" />
+    <MESSAGE value="First iteration of AstonHomework2&#10;New methods and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="First iteration of AstonHomework2&#10;New methods and tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AstonHomework2$Homework01.ic" NAME="Homework01 Coverage Results" MODIFIED="1725824285030" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>homework01.*</FILTER>
+    </SUITE>
+  </component>
+</project>
