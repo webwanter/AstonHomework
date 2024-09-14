@@ -241,6 +241,9 @@ public class OwnArrayList<E> {
         if (comparator != null) {
             return comparator.compare(o1, o2);
         } else {
+            if (o1 == null && o2 == null) return 0;
+            if (o1 == null) return -1;
+            if (o2 == null) return 1;
             return ((Comparable<? super E>) o1).compareTo(o2);
         }
     }
